@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>'.$host_name.' &bull; '.$page_title.'</title>'.$description.'
+<link rel="stylesheet" href="http://'.$_SERVER['SERVER_NAME'].'/'.$web_folder.'styles/'.$css.'/style.css?version='.$css_version.'" type="text/css">
+<link rel="shortcut icon" href="http://'.$_SERVER['SERVER_NAME'].'/favicon.ico" type="image/x-icon">
+<script type="text/javascript" src="http://'.$_SERVER['SERVER_NAME'].'/'.$web_folder.'functions/scripts.js?version='.$scripts_version.'"></script>
+</head>
+<body>
+    <label class="op_input">Показать ОП\'а: <input type="checkbox" name="show_op" value="1"></label>
+    <form id="f1" action="'.$form_action.'" method="post" enctype="multipart/form-data">
+        <div class="form">
+        <div class="form_name" id="form_name">'.$form_title.'</div>
+        <div class="form_smiles" id="smiles_1"><div id="banner"></div></div>
+        <input class="form_title" type="text" name="title" maxlength="70" placeholder="Заголовок">
+        <input type="text" name="email" size="35" maxlength="75" value="" style="display: none;">
+        <span class="form_BB_codes" onclick="_" title="Полужирный"><strong>B</strong></span><span class="form_BB_codes" onclick="_" title="Курсив"><em>I</em></span><span class="form_BB_codes" onclick="_" title="Зачеркнутый"><del>S</del></span><span class="form_BB_codes" onclick="_" title="Подчеркнутый"><ins>U</ins></span><span class="form_BB_codes" onclick="_" title="Спойлер">Sp</span><span class="form_BB_codes" onclick="_" title="Цитата">Q</span><span class="form_BB_codes" onclick="_" title="Смайлы">:)</span>'.$show_op.'
+        <textarea name="text" id="form_textarea" rows="8" cols="55"></textarea>
+        '.$www_input.'<input type="file" class="form_pc_file" name="img">
+        <input type="submit" class="form_submit" value="Отправить">'.$input_sec . $input_id . $for.' </input>
+        </div>
+    </form>
+</body>
+</html>
